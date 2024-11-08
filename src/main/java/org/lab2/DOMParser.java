@@ -4,7 +4,7 @@ import org.w3c.dom.*;
 import javax.xml.parsers.*;
 import java.io.File;
 
-public class PlaneParser {
+public class DOMParser {
 
     public static void parseXML(String xmlFile) throws Exception {
         File file = new File(xmlFile);

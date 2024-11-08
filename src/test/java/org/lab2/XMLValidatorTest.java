@@ -7,8 +7,8 @@ class XMLValidatorTest {
 
     @Test
     void validateValidXML() {
-        String xmlPath = "src/main/java/org/lab2/plane.xml";
-        String xsdPath = "src/main/java/org/lab2/plane.xsd";
+        String xmlPath = "src/main/resources/plane.xml";
+        String xsdPath = "src/main/resources/xsd/plane.xsd";
 
         assertDoesNotThrow(() -> XMLValidator.validate(xmlPath, xsdPath));
     }

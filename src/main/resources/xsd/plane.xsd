@@ -1,0 +1,66 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Root element Planes -->
+    <xsd:element name="Planes">
+        <xsd:complexType>
+            <xsd:sequence>
+                <!-- Multiple Plane elements -->
+                <xsd:element name="Plane" maxOccurs="unbounded">
+                    <xsd:complexType>
+                        <xsd:sequence>
+
+                            <!-- Модель літака -->
+                            <xsd:element name="Model" type="xsd:string"/>
+
+                            <!-- Країна походження -->
+                            <xsd:element name="Origin" type="xsd:string"/>
+
+                            <!-- Характеристики літака -->
+                            <xsd:element name="Chars">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <!-- Тип літака -->
+                                        <xsd:element name="Type" type="xsd:string"/>
+                                        <!-- Кількість місць -->
+                                        <xsd:element name="Seats" type="xsd:int"/>
+
+                                        <!-- Боєкомплект, є або немає для розвідника -->
+                                        <xsd:element name="Ammo" minOccurs="0">
+                                            <xsd:complexType>
+                                                <xsd:sequence>
+                                                    <!-- Ракети (0 - 10) -->
+                                                    <xsd:element name="Missiles" type="xsd:int"/>
+                                                    <!-- Наявність радара (true/false) -->
+                                                    <xsd:element name="Radar" type="xsd:boolean"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+
+                            <!-- Параметри літака -->
+                            <xsd:element name="Parameters">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <!-- Довжина -->
+                                        <xsd:element name="Length" type="xsd:float"/>
+                                        <!-- Ширина -->
+                                        <xsd:element name="Width" type="xsd:float"/>
+                                        <!-- Висота -->
+                                        <xsd:element name="Height" type="xsd:float"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+
+                            <!-- Ціна літака у талерах -->
+                            <xsd:element name="Price" type="xsd:float"/>
+
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>

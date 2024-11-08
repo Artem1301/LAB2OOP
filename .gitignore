@@ -11,6 +11,8 @@ target/
 *.iws
 *.iml
 *.ipr
+.idea
+### I have added idea to gitignore
 
 ### Eclipse ###
 .apt_generated
