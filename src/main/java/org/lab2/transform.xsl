@@ -13,6 +13,12 @@
                         <item>
                             <xsl:value-of select="Model"/>
                         </item>
+                        <Price>
+                            <xsl:value-of select="Price"/>
+                        </Price>
+                        <Missiles>
+                            <xsl:value-of select="Chars/Ammo/Missiles"/>
+                        </Missiles>
                     </xsl:for-each>
                 </xsl:element>
             </xsl:for-each>

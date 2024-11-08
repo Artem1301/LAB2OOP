@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><root>
     <винищувач>
         <item>F-22 Raptor</item>
+        <Price>150000000</Price>
+        <Missiles>8</Missiles>
     </винищувач>
 </root>
